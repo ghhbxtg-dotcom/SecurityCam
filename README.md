@@ -6,9 +6,9 @@
 - Можно запускать сразу через run.bat на Windows  
 Проект подходит для учебных целей и простого домашнего наблюдения.
 ## Установка
-1.Скачиваем репозиторий
-2. Вставляем свой Pushbullet API токен в person_camera_push.py:
-PUSHBULLET_TOKEN = "ВАШ_API_TOKEN"
+1.Скачиваем репозиторий, расспаковываем в удобную папку
+2.Вставляем свой Pushbullet API токен в .env:
+PUSHBULLET_TOKEN = token
 3. Устанавливаем зависимости через батник или вручную:
 Через батник (Windows):
 Просто двойной клик на run.bat. Он:
@@ -28,12 +28,13 @@ pip install -r requirements.txt
 Двойной клик на run.bat.
 Скрипт автоматически создаст окружение и запустит камеру.
 2. Через Python
-python person_camera_push.py
+python securitycam.py
 Файлы проекта
-person_camera_push.py — основной скрипт камеры с AI и push-уведомлениями
-requirements.txt — список библиотек Python
-run.bat — удобный запуск на Windows
-LICENSE — MIT License
+person_camera_push.py - основной скрипт камеры с AI и push-уведомлениями
+requirements.txt - список библиотек Python
+run.bat - удобный запуск на Windows
+LICENSE - MIT License
+.env - ваш токен
 Настройки
 Модель YOLOv8: по умолчанию yolov8n.pt. Можно заменить на yolov8s.pt для точности.
 Cooldown уведомлений: по умолчанию 30 секунд между push-уведомлениями. Можно менять в скрипте.

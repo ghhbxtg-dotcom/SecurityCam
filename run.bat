@@ -1,20 +1,27 @@
 @echo off
 SETLOCAL
 
-REM 
+title SecurityCam
+
 if not exist "venv" (
+
+    echo Creating virtual environment...
+
     python -m venv venv
-    echo Virtual environment created
+
+    call venv\Scripts\activate.bat
+
+    echo Installing requirements...
+
+    pip install -r requirements.txt
+
+) else (
+
+    call venv\Scripts\activate.bat
 )
 
-REM 
-call venv\Scripts\activate.bat
+cls
 
-REM 
-pip install --upgrade pip
-pip install -r requirements.txt
-
-REM 
-securitycam.py
+python securitycam.py
 
 pause

@@ -16,12 +16,9 @@ PUSHBULLET_TOKEN = token
 устанавливает необходимые библиотеки Python
 запускает камеру
 Вручную через терминал:
-# создаём виртуальное окружение
 python -m venv venv
-# активируем его
-venv\Scripts\activate  # Windows
-# source venv/bin/activate  # Linux/Mac
-# устанавливаем зависимости
+venv\Scripts\activate - Windows
+source venv/bin/activate - Linux/Mac
 pip install -r requirements.txt
 Запуск
 1. Через батник (Windows)
@@ -39,7 +36,3 @@ LICENSE - MIT License
 Модель YOLOv8: по умолчанию yolov8n.pt. Можно заменить на yolov8s.pt для точности.
 Cooldown уведомлений: по умолчанию 30 секунд между push-уведомлениями. Можно менять в скрипте.
 Pushbullet токен: обязательно вставьте свой, иначе уведомления работать не будут.
-
-Лицензия
-Проект распространяется под MIT License.
-Вы можете использовать, изменять и распространять код, при условии сохранения авторства.
